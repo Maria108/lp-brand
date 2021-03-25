@@ -11,19 +11,19 @@ var updateCallback = function (data) {
       .then((response) => response.json())
       .then((res) => {
         if (res.Response === 'True') {
-          document.getElementById('movieTitle').innerText = 'Title ' + res.Title;
-          document.getElementById('movieYear').innerText = res.Year;
-          document.getElementById('movieRated').innerHTML = res.Rated;
-          document.getElementById('movieActors').innerHTML = res.Actors;
-          document.getElementById('movieGenre').innerHTML = res.Genre;
-          document.getElementById('movieLanguage').innerHTML = res.Language;
-          document.getElementById('movieCountry').innerHTML = res.Country;
-          document.getElementById('movieReleased').innerHTML = res.Released;
-          document.getElementById('movieRuntime').innerHTML = res.Runtime;
-          document.getElementById('movieDirector').innerHTML = res.Director;
-          document.getElementById('movieAwards').innerHTML = res.Awards;
-          document.getElementById('movieImdbRating').innerHTML = res.imdbRating;
-          document.getElementById('movieImdbVotes').innerHTML = res.imdbVotes;
+          document.getElementById('movieTitle').innerText = 'Title: ' + res.Title;
+          document.getElementById('movieYear').innerText = 'Year: ' + res.Year;
+          document.getElementById('movieRated').innerHTML = 'Rated: ' + res.Rated;
+          document.getElementById('movieReleased').innerHTML = 'Released: ' + res.Released;
+          document.getElementById('movieRuntime').innerHTML = 'Runtime: ' + res.Runtime;
+          document.getElementById('movieGenre').innerHTML = 'Genre: ' + res.Genre;
+          document.getElementById('movieDirector').innerHTML = 'Director: ' + res.Director;
+          document.getElementById('movieActors').innerHTML = 'Actors: ' + res.Actors;
+          document.getElementById('movieLanguage').innerHTML = 'Language: ' + res.Language;
+          document.getElementById('movieCountry').innerHTML = 'Country: ' + res.Country;
+          document.getElementById('movieAwards').innerHTML = 'Awards: ' + res.Awards;
+          document.getElementById('movieImdbRating').innerHTML = 'ImdbRating: ' + res.imdbRating;
+          document.getElementById('movieImdbVotes').innerHTML = 'ImdbVotes: ' + res.imdbVotes;
         }
       })
       .catch((err) => {
