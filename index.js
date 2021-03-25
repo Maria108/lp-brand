@@ -1,10 +1,10 @@
 var pathToData = 'chatTranscript.lines';
 
-var updateCallback = function (pathToData) {
-  console.log('in updateCallback'); // Do something with the returning pathToData//
-  console.log('Stringify pathToData: ', JSON.stringify(pathToData));
-  var path = pathToData.key;
-  var value = pathToData.newValue;
+var updateCallback = function (data) {
+  console.log('in updateCallback'); // Do something with the returning data//
+  console.log('Stringify data: ', JSON.stringify(data));
+  var path = data.key;
+  var value = data.newValue;
   console.log('Stringify movieObj: ', JSON.stringify(value));
   if (value.source === 'visitor') {
     fetch('http://www.omdbapi.com/?t=' + value.text + '&apikey=7a752227')
