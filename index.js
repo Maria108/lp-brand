@@ -2,10 +2,8 @@ var pathToData = 'chatTranscript.lines';
 
 var updateCallback = function (data) {
   console.log('in updateCallback'); // Do something with the returning data//
-  console.log('Stringify data: ', JSON.stringify(data));
   var path = data.key;
   var value = data.newValue;
-  console.log('Stringify movieObj: ', JSON.stringify(value));
   if (value.source === 'visitor') {
     fetch('http://www.omdbapi.com/?t=' + value.text + '&apikey=7a752227')
       .then((response) => response.json())
