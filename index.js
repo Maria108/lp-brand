@@ -7,7 +7,7 @@ var updateCallback = function (data) {
   var lastIndex = value.length - 1;
   var visitorInput = value[lastIndex];
   if (visitorInput.source === 'visitor') {
-    fetch('http://www.omdbapi.com/?t=' + visitorInput.text + '&apikey=7a752227')
+    fetch('https://www.omdbapi.com/?t=' + visitorInput.text + '&apikey=7a752227')
       .then((response) => response.json())
       .then((res) => {
         if (res.Response === 'True') {
