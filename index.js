@@ -1,5 +1,3 @@
-var pathToData = 'chatTranscript.lines';
-
 var updateCallback = function (data) {
   console.log('in updateCallback'); // Do something with the returning data//
   console.log('Stringify data: ', JSON.stringify(data));
@@ -7,7 +5,6 @@ var updateCallback = function (data) {
   var value = data.newValue;
   var index = value.length - 1;
   var movieObj = value[index];
-  console.log('INDEX: ', index);
   console.log('Stringify movieObj: ', JSON.stringify(movieObj));
   if (movieObj.source === 'visitor') {
     fetch('http://www.omdbapi.com/?t=' + movieObj.text + '&apikey=7a752227')
@@ -45,6 +42,8 @@ const notifyWhenDone = function (err) {
   // called when the bind is completed successfully,
   // or when the action terminated with an error.
 };
+
+var pathToData = 'chatTranscript.lines';
 
 lpTag.agentSDK.init({});
 lpTag.agentSDK.bind(pathToData, updateCallback, notifyWhenDone);
