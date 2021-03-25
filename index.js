@@ -4,8 +4,10 @@ var updateCallback = function (data) {
   console.log('in updateCallback'); // Do something with the returning data//
   var path = data.key;
   var value = data.newValue;
+  var lastIndex = value[value.length-1];
+  var visitorInput = value[lastIndex];
   if (value.source === 'visitor') {
-    fetch('http://www.omdbapi.com/?t=' + value.text + '&apikey=7a752227')
+    fetch('http://www.omdbapi.com/?t=' + visitorInput.text + '&apikey=7a752227')
       .then((response) => response.json())
       .then((res) => {
         if (res.Response === 'True') {
