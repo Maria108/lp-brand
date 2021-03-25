@@ -24,8 +24,6 @@ var updateCallback = function (data) {
           document.getElementById('movieAwards').innerHTML = res.Awards;
           document.getElementById('movieImdbRating').innerHTML = res.imdbRating;
           document.getElementById('movieImdbVotes').innerHTML = res.imdbVotes;
-        } else {
-          document.getElementById('errMessage').innerHTML = res.Error;
         }
       })
       .catch((err) => {
