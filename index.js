@@ -24,6 +24,8 @@ var updateCallback = function (data) {
           document.getElementById('movieAwards').innerHTML = 'Awards: ' + res.Awards;
           document.getElementById('movieImdbRating').innerHTML = 'ImdbRating: ' + res.imdbRating;
           document.getElementById('movieImdbVotes').innerHTML = 'ImdbVotes: ' + res.imdbVotes;
+        } else {
+          document.getElementById('movieNotFound').innerHTML = 'Movie not found: ' + res.Error;
         }
       })
       .catch((err) => {
