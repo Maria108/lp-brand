@@ -3,7 +3,7 @@ var pathToData = 'chatTranscript.lines';
 var updateCallback = function (data) {
   console.log('in updateCallback'); // Do something with the returning data//
   console.log('Stringify data: ', JSON.stringify(data));
-  //var path = data.key;
+  var path = data.key;
   var value = data.newValue;
   var index = value.length - 1;
   var movieObj = value[index];
