@@ -11,7 +11,7 @@ var updateCallback = function (data) {
       .then((response) => response.json())
       .then((res) => {
         if (res.Response === 'True') {
-          document.getElementById('movieTitle').innerText = res.Title;
+          document.getElementById('movieTitle').innerText = 'Title ' + res.Title;
           document.getElementById('movieYear').innerText = res.Year;
           document.getElementById('movieRated').innerHTML = res.Rated;
           document.getElementById('movieActors').innerHTML = res.Actors;
